@@ -1,4 +1,4 @@
-# Helper shell script for TYPO3 deployment with TYPO3 Surf
+# Helper shell script for deployment with TYPO3 Surf
 
 ## Configure
 
@@ -27,16 +27,19 @@ Is optinal. Custom appendix to the cli_dispatch.phpsh. For example `scheduler`.
 ### Run script
 
 **Create folder + cronjob entry:**
+
 `./deployment-helper -b=feature-branch-123 -s=staging -c`
 or
 `./deployment-helper --branch=feature-branch-123 --server=staging --create`
 
 **Create folder + skip cronjob entry:**
+
 `./deployment-helper -b=feature-branch-123 -s=staging -icj -c`
 or
 `./deployment-helper --branch=feature-branch-123 --server=staging --ignore-cronjob --create`
 
 **Delete folder:**
+
 `./deployment-helper -b=feature-branch-123 -s=staging -d`
 `./deployment-helper --branch=feature-branch-123 --server=staging --delete`
 
@@ -45,10 +48,15 @@ or
 ### Options
 
 `-b= or --branch=`: Branch name to deploy
+
 `-s= or --server=`: Server to deploy to
+
 `-icj or --ignore-cronjob`: Ignore creation of shell file and adding/removing cronmjob entries
+
 `-c or --create`: Create folder and cronjob entry
+
 `-d or --delete`: Deletes folder and cronjob entry
+
 `--help`: Get some help on the bash (NOT IMPLEMENTED YET)
 
 ## To Do
