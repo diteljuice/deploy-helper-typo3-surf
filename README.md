@@ -28,29 +28,31 @@ Is optinal. Custom appendix to the cli_dispatch.phpsh. For example `scheduler`.
 
 **Create folder + cronjob entry:**
 
-`./deployment-helper -b=feature-branch-123 -s=staging -c`
+`./deployment-helper.sh -b=feature-branch-123 -s=staging -c`
 
 or
 
-`./deployment-helper --branch=feature-branch-123 --server=staging --create`
+`./deployment-helper.sh --branch=feature-branch-123 --server=staging --create`
 
 **Create folder + skip cronjob entry:**
 
-`./deployment-helper -b=feature-branch-123 -s=staging -icj -c`
+`./deployment-helper.sh -b=feature-branch-123 -s=staging -icj -c`
 
 or
 
-`./deployment-helper --branch=feature-branch-123 --server=staging --ignore-cronjob --create`
+`./deployment-helper.sh --branch=feature-branch-123 --server=staging --ignore-cronjob --create`
 
 **Delete folder:**
 
-`./deployment-helper -b=feature-branch-123 -s=staging -d`
-`./deployment-helper --branch=feature-branch-123 --server=staging --delete`
+`./deployment-helper.sh -b=feature-branch-123 -s=staging -d`
+
+`./deployment-helper.sh --branch=feature-branch-123 --server=staging --delete`
 
 It is possible to delete multiple branches at a time
 
-`./deployment-helper -b=feature-branch-123 -b=feature-branch-456 -s=staging -d`
-`./deployment-helper --branch=feature-branch-123 --branch=feature-branch-456 --server=staging --delete`
+`./deployment-helper.sh -b=feature-branch-123 -b=feature-branch-456 -s=staging -d`
+
+`./deployment-helper.sh --branch=feature-branch-123 --branch=feature-branch-456 --server=staging --delete`
 
 ### Add server configuration
 
