@@ -47,6 +47,11 @@ or
 `./deployment-helper -b=feature-branch-123 -s=staging -d`
 `./deployment-helper --branch=feature-branch-123 --server=staging --delete`
 
+It is possible to delete multiple branches at a time
+
+`./deployment-helper -b=feature-branch-123 -b=feature-branch-456 -s=staging -d`
+`./deployment-helper --branch=feature-branch-123 --branch=feature-branch-456 --server=staging --delete`
+
 ### Add server configuration
 
 ### Options
@@ -67,4 +72,4 @@ or
 
 * Write README instructions
 * Write --help text
-* Delete multiple folders and cronjob entries on multiple servers
+* Delete on multiple servers
