@@ -42,11 +42,13 @@ or
 
 `./deployment-helper.sh --branch=feature-branch-123 --server=staging --ignore-cronjob --create`
 
-**Delete folder:**
+**Delete folder + cronjobs:**
 
 `./deployment-helper.sh -b=feature-branch-123 -s=staging -d`
 
 `./deployment-helper.sh --branch=feature-branch-123 --server=staging --delete`
+
+The option `-icj/--ignore-cronjob` can be used too.
 
 It is possible to delete multiple branches from multiple servers at once:
 
@@ -74,3 +76,4 @@ It is possible to delete multiple branches from multiple servers at once:
 
 * Write README instructions
 * Write --help text
+* Add --prune option (get existing branches from bitbucket and delete all not matching folders from remote servers)
