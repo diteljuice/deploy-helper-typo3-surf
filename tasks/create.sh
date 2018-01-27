@@ -3,7 +3,7 @@
 # Check for errors
 . "./tasks/error.sh"
 
-SELECTED_BRANCH=${BRANCH[0]}
+SELECTED_BRANCH=${BRANCHES[0]}
 
 # Handle folder management
 . './tasks/subtasks/folder-management.sh'

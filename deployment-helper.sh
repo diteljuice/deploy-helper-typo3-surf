@@ -22,7 +22,7 @@ do
       do
         let cntBranch++
       done
-      BRANCH+=(${key#*=})
+      BRANCHES+=(${key#*=})
       shift
   		;;
     -s=*|--server=*)

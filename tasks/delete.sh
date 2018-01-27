@@ -4,7 +4,7 @@
 . "./tasks/error.sh"
 
 # Iterate over each branch option and do subtasks
-for b in ${BRANCH[@]}
+for b in ${BRANCHES[@]}
 do
 
   SELECTED_BRANCH=$b
