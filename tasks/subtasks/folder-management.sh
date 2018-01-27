@@ -4,8 +4,8 @@
 if [ $flagCreate = 1 ];
 then
   ssh $SSH_USER@$SSH_HOST \
-  "[ ! -d '$DEPLOY_ROOT/$BRANCH' ] \
-  && mkdir $DEPLOY_ROOT/$BRANCH  \
+  "[ ! -d '$DEPLOY_ROOT/$SELECTED_BRANCH' ] \
+  && mkdir $DEPLOY_ROOT/$SELECTED_BRANCH  \
   && exit"
 fi
 
@@ -14,7 +14,7 @@ fi
 if [ $flagDelete = 1 ];
 then
   ssh $SSH_USER@$SSH_HOST \
-  "[ -d '$DEPLOY_ROOT/$BRANCH' ] \
-  && rm -rf $DEPLOY_ROOT/$BRANCH  \
+  "[ -d '$DEPLOY_ROOT/$SELECTED_BRANCH' ] \
+  && rm -rf $DEPLOY_ROOT/$SELECTED_BRANCH  \
   && exit"
 fi
