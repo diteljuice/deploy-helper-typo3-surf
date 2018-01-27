@@ -3,18 +3,25 @@
 # Check for errors
 . "./tasks/error.sh"
 
-# Iterate over each branch option and do subtasks
-for b in ${BRANCHES[@]}
+for s in ${SERVERS[@]}
 do
 
-  SELECTED_BRANCH=$b
+  . "./config/server/$s.cfg"
 
-  # Handle folder management
-  . './tasks/subtasks/folder-management.sh'
+  # Iterate over each branch option and do subtasks
+  for b in ${BRANCHES[@]}
+  do
 
-  # Handle cronjob
-  if [ $flagIgnoreCronjob = 0 ];
-  then
-    . './tasks/subtasks/cronjob.sh'
-  fi
+    SELECTED_BRANCH=$b
+
+    # Handle folder management
+    . './tasks/subtasks/folder-management.sh'
+
+    # Handle cronjob
+    if [ $flagIgnoreCronjob = 0 ];
+    then
+      . './tasks/subtasks/cronjob.sh'
+    fi
+  done
+
 done

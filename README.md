@@ -48,11 +48,11 @@ or
 
 `./deployment-helper.sh --branch=feature-branch-123 --server=staging --delete`
 
-It is possible to delete multiple branches at a time
+It is possible to delete multiple branches from multiple servers at once:
 
-`./deployment-helper.sh -b=feature-branch-123 -b=feature-branch-456 -s=staging -d`
+`./deployment-helper.sh -b=feature-branch-123 -b=feature-branch-456 -s=staging -s=test -d`
 
-`./deployment-helper.sh --branch=feature-branch-123 --branch=feature-branch-456 --server=staging --delete`
+`./deployment-helper.sh --branch=feature-branch-123 --branch=feature-branch-456 --server=staging --server=test --delete`
 
 ### Add server configuration
 
@@ -74,4 +74,3 @@ It is possible to delete multiple branches at a time
 
 * Write README instructions
 * Write --help text
-* Delete on multiple servers

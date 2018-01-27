@@ -30,7 +30,7 @@ do
       do
         let cntServer++
       done
-      . "./config/server/${key#*=}.cfg"
+      SERVERS+=(${key#*=})
       shift
       ;;
     -icj|--ignore-cronjob)
