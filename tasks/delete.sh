@@ -3,10 +3,17 @@
 # Check for errors
 . "./tasks/error.sh"
 
+# Do delete subtask on server(s)
 for s in ${SERVERS[@]}
 do
-
   . "./config/server/$s.cfg"
+
+  if [ $flagPrune = 1 ];
+  then
+    # . "./tasks/subtasks/prune.sh"
+    . "./experimental/prune.sh"
+    BRANCHES=("${PRUNE_DELETE[@]}")
+  fi
 
   # Iterate over each branch option and do subtasks
   for b in ${BRANCHES[@]}
@@ -23,5 +30,4 @@ do
       . './tasks/subtasks/cronjob.sh'
     fi
   done
-
 done

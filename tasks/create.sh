@@ -3,6 +3,10 @@
 # Check for errors
 . "./tasks/error.sh"
 
+# Load server configuration
+. "./config/server/${SERVERS[@]}.cfg"
+
+# Set configuration
 SELECTED_BRANCH=${BRANCHES[0]}
 
 # Handle folder management

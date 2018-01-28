@@ -37,6 +37,10 @@ do
       flagIgnoreCronjob=1
       shift
       ;;
+    --prune)
+      flagPrune=1
+      shift
+      ;;
     -c|--create)
       flagCreate=1
       . './tasks/create.sh'

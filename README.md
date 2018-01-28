@@ -56,6 +56,10 @@ It is possible to delete multiple branches from multiple servers at once:
 
 `./deployment-helper.sh --branch=feature-branch-123 --branch=feature-branch-456 --server=staging --server=test --delete`
 
+If you run the script in a git project, it is possible to compare remote branches with the branches on the remote server and delete all non matching folders/cronjob entries:
+
+`./deployment-helper.sh -s=staging -s=test --prune -d`
+
 ### Add server configuration
 
 ### Options
@@ -65,6 +69,8 @@ It is possible to delete multiple branches from multiple servers at once:
 `-s=` or `--server=`: Server to deploy to
 
 `-icj` or `--ignore-cronjob`: Ignore creation of shell file and adding/removing cronmjob entries
+
+`--prune`: Get remote branches and delete all non matching folders on remote server(s)
 
 `-c` or `--create`: Create folder and cronjob entry
 
@@ -76,4 +82,3 @@ It is possible to delete multiple branches from multiple servers at once:
 
 * Write README instructions
 * Write --help text
-* Add --prune option (get existing branches from bitbucket and delete all not matching folders from remote servers)
