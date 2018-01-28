@@ -24,11 +24,15 @@ Is optinal. Custom appendix to the cli_dispatch.phpsh. For example `scheduler`.
 
 ## How to use
 
+### Add server configuration
+
+Server configuration are located in the folder `config/server/`. Have a look at the `example.cfg`. Rename file to your server name.
+
 ### Options
 
 `-b=` or `--branch=`: Branch name to deploy
 
-`-s=` or `--server=`: Server to deploy to
+`-s=` or `--server=`: Server to deploy to. Must be the same as the corresponding server config file.
 
 `-icj` or `--ignore-cronjob`: Ignore creation of shell file and adding/removing cronmjob entries
 
@@ -75,8 +79,6 @@ It is possible to delete multiple branches from multiple servers at once:
 If you run the script in a git project, it is possible to compare remote branches with the branches on the remote server and delete all non matching folders/cronjob entries:
 
 `./deployment-helper.sh -s=staging -s=test --prune -d`
-
-### Add server configuration
 
 ## To Do
 
