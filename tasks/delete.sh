@@ -10,8 +10,7 @@ do
 
   if [ $flagPrune = 1 ];
   then
-    # . "./tasks/subtasks/prune.sh"
-    . "./experimental/prune.sh"
+    . "./tasks/subtasks/prune.sh"
     BRANCHES=("${PRUNE_DELETE[@]}")
   fi
 
