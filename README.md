@@ -24,6 +24,22 @@ Is optinal. Custom appendix to the cli_dispatch.phpsh. For example `scheduler`.
 
 ## How to use
 
+### Options
+
+`-b=` or `--branch=`: Branch name to deploy
+
+`-s=` or `--server=`: Server to deploy to
+
+`-icj` or `--ignore-cronjob`: Ignore creation of shell file and adding/removing cronmjob entries
+
+`--prune`: Get remote branches and delete all non matching folders on remote server(s)
+
+`-c` or `--create`: Create folder and cronjob entry
+
+`-d` or `--delete`: Deletes folder and cronjob entry
+
+`--help`: Get some help on the bash (NOT IMPLEMENTED YET)
+
 ### Run script
 
 **Create folder + cronjob entry:**
@@ -61,22 +77,6 @@ If you run the script in a git project, it is possible to compare remote branche
 `./deployment-helper.sh -s=staging -s=test --prune -d`
 
 ### Add server configuration
-
-### Options
-
-`-b=` or `--branch=`: Branch name to deploy
-
-`-s=` or `--server=`: Server to deploy to
-
-`-icj` or `--ignore-cronjob`: Ignore creation of shell file and adding/removing cronmjob entries
-
-`--prune`: Get remote branches and delete all non matching folders on remote server(s)
-
-`-c` or `--create`: Create folder and cronjob entry
-
-`-d` or `--delete`: Deletes folder and cronjob entry
-
-`--help`: Get some help on the bash (NOT IMPLEMENTED YET)
 
 ## To Do
 
